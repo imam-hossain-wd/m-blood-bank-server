@@ -4,6 +4,7 @@ import { AuthRoutes } from '../modules/auth/auth.route';
 
 
 
+
 const router = express.Router();
 
 const moduleRoutes = [

@@ -7,27 +7,9 @@ import { authService } from './auth.service';
 import config from '../../../config';
 
 
-// const createUser: RequestHandler = catchAsync(async (req, res) => {
-//   let user = req.body.data;
-//   user = JSON.parse(req.body.data);
-
-//   if (req.file) {
-//     const imageUrl = `/uploads/profile/${req.file.filename}`;
-//     user.profileImageUrl = imageUrl;
-//   }
-//   const result = await authService.insertIntoDB(user);
-//   sendResponse(res, {
-//     statusCode: httpStatus.OK,
-//     success: true,
-//     message: 'User created successfully!',
-//     data: result,
-//   });
-// });
 
 const createUser: RequestHandler = catchAsync(async (req, res) => {
   const user = req.body;
-
-  console.log(user, 'controller clicked-----------------------------------------------------------------');
   const result = await authService.insertIntoDB(user);
   sendResponse(res, {
     statusCode: httpStatus.OK,
