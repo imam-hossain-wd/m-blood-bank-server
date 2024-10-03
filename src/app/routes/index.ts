@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import express from 'express';
-// import { AuthRoutes } from '../modules/auth/auth.route';
+import { AuthRoutes } from '../modules/auth/auth.route';
+
 
 
 const router = express.Router();
@@ -8,8 +9,7 @@ const router = express.Router();
 const moduleRoutes = [
   {
     path: '/auth',
-    route: '',
-    // route: AuthRoutes,
+    route: AuthRoutes,
   },
 ];
 //@ts-ignore
